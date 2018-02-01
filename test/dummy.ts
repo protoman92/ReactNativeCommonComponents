@@ -1,0 +1,1 @@
+console.log('This file is here to force TS to compile to different folders');
