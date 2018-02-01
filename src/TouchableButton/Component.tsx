@@ -43,13 +43,13 @@ export class Self extends Component<Props.Type> {
       .flatMap(v => Try.unwrap(v.touchableButton));
 
     return <TouchableOpacity
-      {...properties.map(v => v.buttonContainer(id).value)}
+      {...properties.flatMap(v => v.buttonContainer(id)).value}
       style={style.buttonContainer(id)
         .map(v => Style.Conditional.buttonContainer(v))
         .map(v => Object.assign({}, v, Style.Compulsory.buttonContainer())).value}
       {...buttonProps}>
       <Text
-        {...properties.map(v => v.buttonText(id)).value}
+        {...properties.flatMap(v => v.buttonText(id)).value}
         style={style.buttonText(id)
           .map(v => Style.Conditional.buttonText(v))
           .map(v => Object.assign({}, v, Style.Compulsory.buttonText())).value}>
