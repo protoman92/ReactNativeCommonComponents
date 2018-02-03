@@ -32,7 +32,7 @@ export namespace Style {
    * Provide style selector for a native touchable button component.
    */
   export interface ProviderType {
-    touchableButton: Readonly<SelectorType>;
+    readonly touchableButton: SelectorType;
   }
 
   export namespace Conditional {
@@ -99,6 +99,6 @@ export namespace Properties {
    * Provide properties selector for a native touchable button component.
    */
   export interface ProviderType {
-    touchableButton?: Readonly<SelectorType>;
+    readonly touchableButton?: SelectorType;
   }
 }

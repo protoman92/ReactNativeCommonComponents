@@ -11,15 +11,15 @@ export namespace Props {
    * for convenient props passing.
    */
   export interface Type extends TouchableOpacityProperties {
-    id: Readonly<string>;
-    propertiesProvider?: Readonly<Properties.ProviderType>;
-    styleProvider: Readonly<Style.ProviderType>;
+    readonly id: string;
+    readonly propertiesProvider?: Properties.ProviderType;
+    readonly styleProvider: Style.ProviderType;
 
     /**
      * Set the button's title. This text will be added to the innermost Text
      * component.
      */
-    value?: Readonly<string>;
+    readonly value?: string;
   }
 }
 
