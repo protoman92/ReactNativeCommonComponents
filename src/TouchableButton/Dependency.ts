@@ -91,8 +91,8 @@ export namespace Properties {
    * Properties selector for a native touchable button component.
    */
   export interface SelectorType {
-    buttonContainer(id: string): Try<ButtonContainerType>;
-    buttonText(id: string): Try<ButtonTextType>;
+    buttonContainer?(id: string): Try<ButtonContainerType>;
+    buttonText?(id: string): Try<ButtonTextType>;
   }
 
   /**
